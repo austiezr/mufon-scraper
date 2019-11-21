@@ -17,7 +17,7 @@ def get_table():
     page = BeautifulSoup(driver.page_source, 'html.parser')
     rows = page.select_one('form')
     headers = [th.text.encode('utf-8') for th in rows.select('tr th')]
-    with open("out.csv", "w") as f:
+    with open("ENV/out.csv", "w") as f:
         wr = csv.writer(f)
         wr.writerow(headers)
         wr.writerows([[td.text.encode("utf-8") for td in row.find_all("td")] for row in rows.select("tr + tr")])

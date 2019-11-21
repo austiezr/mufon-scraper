@@ -1,7 +1,7 @@
 import pandas as pd
 import datetime as dt
 
-df = pd.read_csv('mufon.csv')
+df = pd.read_csv('ENV/mufon.csv')
 
 for i in df["Date_Submitted"]:
     if "b'" in df["Date_Submitted"]:
@@ -10,4 +10,4 @@ for i in df["Date_Submitted"]:
 
 print(df["Date_Submitted"].head())
 
-df.to_csv("mufontest.csv")
+df.to_csv("ENV/mufontest.csv")
