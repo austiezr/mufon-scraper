@@ -7,6 +7,7 @@ def job():
     get.get_table()
     time.sleep(5)
     create.df_create_and_merge()
+    create.df_create_and_merge()
 
 schedule.every().day.at("06:00").do(job)
 
