@@ -1,0 +1,66 @@
+/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python: can't open file 'MyScheduledProgram.py': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "mufon_scraper.py", line 1, in <module>
+    import get_mufon as get
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 1, in <module>
+    from selenium import webdriver
+ModuleNotFoundError: No module named 'selenium'
+Traceback (most recent call last):
+  File "mufon_scraper.py", line 1, in <module>
+    import get_mufon as get
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 1, in <module>
+    from selenium import webdriver
+ModuleNotFoundError: No module named 'selenium'
+Traceback (most recent call last):
+  File "mufon_scraper.py", line 1, in <module>
+    import get_mufon as get
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 1, in <module>
+    from selenium import webdriver
+ModuleNotFoundError: No module named 'selenium'
+Trying to download new driver from http://chromedriver.storage.googleapis.com/78.0.3904.105/chromedriver_mac64.zip
+Unpack archive /Users/austie/.wdm/drivers/chromedriver/78.0.3904.105/mac64/chromedriver.zip
+
+Looking for [chromedriver 78.0.3904.105 mac64] driver in cache 
+File found in cache by path [/Users/austie/.wdm/drivers/chromedriver/78.0.3904.105/mac64/chromedriver]
+Traceback (most recent call last):
+  File "mufon_scraper.py", line 1, in <module>
+    import get_mufon as get
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 1, in <module>
+    from selenium import webdriver
+ModuleNotFoundError: No module named 'selenium'
+Trying to download new driver from http://chromedriver.storage.googleapis.com/78.0.3904.105/chromedriver_mac64.zip
+Trying to download new driver from http://chromedriver.storage.googleapis.com/78.0.3904.105/chromedriver_mac64.zip
+Unpack archive /Users/austie/.wdm/drivers/chromedriver/78.0.3904.105/mac64/chromedriver.zip
+Unpack archive /Users/austie/.wdm/drivers/chromedriver/78.0.3904.105/mac64/chromedriver.zip
+Traceback (most recent call last):
+  File "mufon_scraper.py", line 14, in <module>
+    schedule.run_pending()
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/schedule/__init__.py", line 563, in run_pending
+    default_scheduler.run_pending()
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/schedule/__init__.py", line 94, in run_pending
+    self._run_job(job)
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/schedule/__init__.py", line 147, in _run_job
+    ret = job.run()
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/schedule/__init__.py", line 466, in run
+    ret = self.job_func()
+  File "mufon_scraper.py", line 7, in job
+    get.get_table()
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 8, in get_table
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/webdriver_manager/chrome.py", line 24, in install
+    driver_path = self.download_driver(self.driver)
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/webdriver_manager/manager.py", line 42, in download_driver
+    self.driver_cache.save_latest_driver_version_number_to_cache(driver.get_name(), driver_version)
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/webdriver_manager/driver_cache.py", line 66, in save_latest_driver_version_number_to_cache
+    metadata = self.read_metadata()
+  File "/Users/austie/PycharmProjects/Mufon_Scraper/venv/lib/python3.7/site-packages/webdriver_manager/driver_cache.py", line 90, in read_metadata
+    return json.load(outfile)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python/3.7.5/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
