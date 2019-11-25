@@ -18,7 +18,7 @@ def clean_csv(df):
     df["Short_Description"] = df["Short_Description"].str.replace("{tjd} ", '')
     df["Short_Description"] = df["Short_Description"].str.replace("{rjl} ", '')
     df["Short_Description"] = df["Short_Description"].str.replace("{RJL} ", '')
-    df["Short_Description"] = df["Short_Description"].str.replace("\[rjl} ", '')
+    df["Short_Description"] = df["Short_Description"].str.replace("\\[rjl} ", '')
     df["Short_Description"] = df["Short_Description"].str.replace("{cak} ", '')
 
     df.drop_duplicates(keep="last", inplace=True)
