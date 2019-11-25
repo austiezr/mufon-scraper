@@ -4,6 +4,7 @@ import time
 from bs4 import BeautifulSoup
 import csv
 
+
 def get_table():
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get('https://mufoncms.com/cgi-bin/report_handler.pl?req=search_page')
