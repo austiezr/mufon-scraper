@@ -7,9 +7,10 @@ xax = df["Date_Submitted"].unique()[::-1]
 
 yax = df["Date_Submitted"].value_counts().sort_index()
 
-plt.plot(xax, color="green", linestyle="solid")
+plt.plot(yax, color="green", linestyle="solid")
 plt.title("Daily Frequency")
 plt.ylabel("Number Of Sightings")
+plt.xticks(rotation=90)
 
 fig, ax = plt.subplots()
 plt.title("Daily Frequency")
