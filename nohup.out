@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "mufon_scraper.py", line 1, in <module>
-    import get_mufon as get
-  File "/Users/austie/PycharmProjects/Mufon_Scraper/get_mufon.py", line 1, in <module>
-    from selenium import webdriver
-ModuleNotFoundError: No module named 'selenium'
