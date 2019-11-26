@@ -1,14 +1,15 @@
 import pandas as pd
-
-mufon = pd.read_csv('ENV/mufon.csv')
-
+import numpy as np
 
 def clean_csv(df):
     df['Date_Submitted'] = df['Date_Submitted'].str.replace("b'", '')
     df['Date_Submitted'] = df['Date_Submitted'].str.replace("'", '')
+    # df['Date_Submitted'] = pd.to_datetime(df['Date_Submitted'], format='%Y-%m-%d')
 
     df['Date_Time'] = df['Date_Time'].str.replace("b'", '')
     df['Date_Time'] = df['Date_Time'].str.replace("'", '')
+    # df['Date_Time'] = pd.to_datetime(df['Date_Time'], format='%Y-%m-%d%I%M%p', errors='ignore')
+    # df['Date_Time'] = df['Date_Time'].replace('12:00AM', df['Date_Submitted'])
 
     df["Location"] = df["Location"].str.replace("b'", '')
     df["Location"] = df["Location"].str.replace("'", '')
@@ -22,7 +23,6 @@ def clean_csv(df):
     df["Short_Description"] = df["Short_Description"].str.replace("{cak} ", '')
 
     df.drop_duplicates(keep="last", inplace=True)
-
 
 def drop_columns(df):
     df.drop(df.columns.difference(['Date_Submitted', 'Date_Time', 'Location', 'Short_Description']), 1, inplace=True)
