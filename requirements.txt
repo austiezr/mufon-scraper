@@ -12,6 +12,8 @@ colorama==0.4.1
 configparser==4.0.2
 crayons==0.3.0
 cycler==0.10.0
+geographiclib==1.50
+geopy==1.20.0
 idna==2.8
 kiwisolver==1.1.0
 lxml==4.4.1
