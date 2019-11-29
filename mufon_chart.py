@@ -9,7 +9,7 @@ freq_yax = df["Date_Submitted"].value_counts().sort_index()
 
 day_xax = df["Day_Submitted"].value_counts()[::-1]
 
-plt.plot(freq_yax, color="green", linestyle="solid")
+plt.plot(freq_yax, color="green", linestyle="solid", marker="o")
 plt.title("Daily Frequency")
 plt.ylabel("Number Of Sightings")
 plt.xticks(rotation=90)
