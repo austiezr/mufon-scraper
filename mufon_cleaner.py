@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import calendar
+import datetime
+
 
 def clean_csv(df):
     df['Date_Submitted'] = df['Date_Submitted'].str.replace("b'", '')
@@ -22,7 +25,11 @@ def clean_csv(df):
     df["Short_Description"] = df["Short_Description"].str.replace("\\[rjl} ", '')
     df["Short_Description"] = df["Short_Description"].str.replace("{cak} ", '')
 
+    df["Day_Submitted"] = pd.to_datetime(df['Date_Submitted'], format='%Y-%m-%d')
+    df["Day_Submitted"] = df["Day_Submitted"].dt.day_name()
+
     df.drop_duplicates(keep="last", inplace=True)
 
+
 def drop_columns(df):
-    df.drop(df.columns.difference(['Date_Submitted', 'Date_Time', 'Location', 'Short_Description']), 1, inplace=True)
+    df.drop(df.columns.difference(['Date_Submitted', 'Day_Submitted', 'Date_Time', 'Location', 'Short_Description']), 1, inplace=True)
